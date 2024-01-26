@@ -4,6 +4,7 @@ import "./index.css";
 import './App.css'
 import 'bootstrap/dist/css/bootstrap.min.css';
 import {
+  Navigate,
   RouterProvider,
   createBrowserRouter,
 } from "react-router-dom";
@@ -15,12 +16,8 @@ import Inscription from "./connect/inscription";
 
 const route = createBrowserRouter([
   {
-    path: "/connexion",
-    element: <Connexion />,
-  },
-  {
-    path: "/inscription",
-    element: <Inscription />,
+    path: "/",
+    element: <Navigate to="/connexion" />,
   },
   {
     path: "/",
@@ -35,6 +32,14 @@ const route = createBrowserRouter([
         element: <Hotels />,
       },
     ],
+  },
+  {
+    path: "/connexion",
+    element: <Connexion />,
+  },
+  {
+    path: "/inscription",
+    element: <Inscription />,
   },
 ]);
 
