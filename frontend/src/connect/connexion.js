@@ -19,7 +19,7 @@ function Connexion() {
      e.preventDefault();
      console.log(data);
      try {
-       const url = "http://hotel-a774.onrender.com/api /users";
+       const url = "https://hotel-a774.onrender.com/api /users";
        const { data: res } = await axios.post(url, data);
        localStorage.setItem("token", res.data);
        
